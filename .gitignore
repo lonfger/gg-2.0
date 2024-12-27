@@ -2,3 +2,6 @@ password.dat
 /config
 /node_modules
 password_.dat
+proxies.txt
+/email.txt
+account.js
