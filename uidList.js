@@ -1,1 +1,3 @@
-export const uidList = [];
+const uidList = [];
+
+module.exports = {uidList}
