@@ -15,8 +15,8 @@ try {
 
   // 将每行数据转换为指定格式
   const formattedLines = lines.map((line) => {
-    const [ip, port, username, pwd] = line.split(':');
-    return `http://${username}:${pwd}@${ip}:${port}`;
+    const [user, host] = line.split('@');
+    return `http://${user}@${host}`;
   });
 
   // 分割数据并写入多个文件
