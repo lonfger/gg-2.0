@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // 读取 email.txt 文件
 const inputFile = 'email.txt';
-const outputFile = 'outputAccount.js';
+const outputFile = 'account.js';
 
 try {
   // 读取文件内容并按行分割
@@ -19,7 +19,7 @@ try {
   });
 
   // 构造输出的 JS 内容
-  const outputContent = `const accountLists = ${JSON.stringify(accountLists, null, 2)};\n`;
+  const outputContent = `const accountLists = ${JSON.stringify(accountLists, null, 2)};\n module.exports = { accountLists }`;
 
   // 写入到 accounts.js
   fs.writeFileSync(outputFile, outputContent, 'utf8');
